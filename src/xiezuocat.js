@@ -61,11 +61,11 @@ var Xiezuocat = function (secretKey) {
     return axios(config);
   }
 
-  this.getSSOSignature = function (appId, id) {
+  this.getSSOSignature = function (appId, uid) {
     const timestamp = new Date().getTime();
     const paraMap = {
       "appId": appId,
-      "uid": id,
+      "uid": uid,
       "timestamp": timestamp,
     };
 
