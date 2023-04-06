@@ -98,5 +98,6 @@ eyJhcHBJZCI6Inh4eCIsInVpZCI6ImxsIiwidGltZXN0YW1wIjoxNjgwNTA2MjI2MzgxLCJzaWduIjoi
 ```
 ##### 拿到签名之后访问下述URL即可登录写作猫
 ```js
+// p为签名签名算法生成的结果
 https://xiezuocat.com/api/open/login?p=eyJhcHBJZCI6Inh4eCIsInVpZCI6ImxsIiwidGltZXN0YW1wIjoxNjgwNTA2MjI2MzgxLCJzaWduIjoiY2M1YzBiZjA0ZDUxZjQ3NmVkOGRiYjVkOWVmNDI5ZTNmZmEyNTUyZjEyMzc4MDgwODI5NGY4ODY0M2I4MjQ3OSJ9
 ```
