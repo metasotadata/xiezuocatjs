@@ -17,7 +17,7 @@ var checkData = JSON.stringify({
     "我想念十分赵忠祥。嘿嘿嘿。"
   ]
 });
-var xiezuocat = new Xiezuocat({your-secret-key});
+var xiezuocat = new Xiezuocat({your-secretKey});
 xiezuocat.check(checkData).then(res => {
   console.log(JSON.stringify(res.data));
 }).catch(err => {
@@ -37,7 +37,7 @@ var rewriteData = JSON.stringify({
   ],
   "level": "middle"
 });
-var xiezuocat = new Xiezuocat({your-secret-key});
+var xiezuocat = new Xiezuocat({your-secretKey});
 xiezuocat.rewrite(rewriteData).then(res => {
   console.log(JSON.stringify(res.data));
 }).catch(err => {
@@ -58,7 +58,7 @@ var generateParams = JSON.stringify({
   "title": "飞机",
   "length": "default"
 });
-var xiezuocat = new Xiezuocat({your-secret-key});
+var xiezuocat = new Xiezuocat({your-secretKey});
 xiezuocat.generate(generateParams).then(res => {
   console.log(JSON.stringify(res.data));
 }).catch(err => {
@@ -73,7 +73,7 @@ xiezuocat.generate(generateParams).then(res => {
 #### 获取生成结果
 ##### 调用示例
 ```js
-var xiezuocat = new Xiezuocat({your-secret-key});
+var xiezuocat = new Xiezuocat({your-secretKey});
 var docId = "66a3d815-4aed-4d29-a045-2d5a0e3acdc8"; // 此处docId为第一步生成的结果
 xiezuocat.getGenerateResult(docId).then(res => {
   console.log(JSON.stringify(res.data));
@@ -88,7 +88,7 @@ xiezuocat.getGenerateResult(docId).then(res => {
 ### 4、单点登录签名算法
 ##### 调用示例
 ```js
-var xiezuocat = new Xiezuocat({your-secret-key});
+var xiezuocat = new Xiezuocat({your-secretKey});
 const signature = xiezuocat.getSSOSignature({your-appId}, {your-uid});
 console.log(signature);
 ```
@@ -96,7 +96,7 @@ console.log(signature);
 ```json
 eyJhcHBJZCI6Inh4eCIsInVpZCI6ImxsIiwidGltZXN0YW1wIjoxNjgwNTA2MjI2MzgxLCJzaWduIjoiY2M1YzBiZjA0ZDUxZjQ3NmVkOGRiYjVkOWVmNDI5ZTNmZmEyNTUyZjEyMzc4MDgwODI5NGY4ODY0M2I4MjQ3OSJ9
 ```
-拿到签名之后访问下述URL即可登录写作猫
+##### 拿到签名之后访问下述URL即可登录写作猫
 ```js
 https://xiezuocat.com/api/open/login?p=eyJhcHBJZCI6Inh4eCIsInVpZCI6ImxsIiwidGltZXN0YW1wIjoxNjgwNTA2MjI2MzgxLCJzaWduIjoiY2M1YzBiZjA0ZDUxZjQ3NmVkOGRiYjVkOWVmNDI5ZTNmZmEyNTUyZjEyMzc4MDgwODI5NGY4ODY0M2I4MjQ3OSJ9
 ```
